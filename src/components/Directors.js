@@ -6,12 +6,12 @@ function Directors() {
     <div>
       <h1>Directors Page</h1>
       {directors.map((director)=>(
-        <div>
+        <div key={director.name}>
           <h3>Name: {director.name}</h3>
           Movies:
           <ul>
             {director.movies.map((movie)=>(
-              <li>{movie}</li>
+              <li key={movie}>{movie}</li>
             ))}
           </ul>
         </div>

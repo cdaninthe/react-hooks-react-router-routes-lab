@@ -6,12 +6,12 @@ function Actors() {
     <div>
       <h1>Actors Page</h1>
       {actors.map((actor)=>(
-        <div>
+        <div key={actor.name}>
           <h3>Name: {actor.name}</h3>
           Movies:
           <ul>
             {actor.movies.map((movie)=>(
-              <li>{movie}</li>
+              <li key={movie}>{movie}</li>
             ))}
           </ul>
         </div>

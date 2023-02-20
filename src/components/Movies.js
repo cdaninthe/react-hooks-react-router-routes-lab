@@ -6,13 +6,13 @@ function Movies() {
     <div>
       <h1>Movies Page</h1>
       {movies.map((movie)=>(
-        <div>
+        <div key={movie.title}>
           <h3>Name: {movie.title}</h3>
           <p>Time: {movie.time} minutes</p>
           <p>Genres: </p>
           <ul>
             {movie.genres.map((genre)=>(
-              <li>{genre}</li>
+              <li key={genre}>{genre}</li>
             ))}
           </ul>
 
